@@ -1,0 +1,196 @@
+body {
+  font-family: 'Inter', sans-serif;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+/* ---------- Variables ---------- */
+:root {
+  --bg-color: #f5f5f7;
+  --form-bg: #fff;
+  --text-color: #000;
+  --illustration-bg: #f3f2f4;
+
+  /* Buttons */
+  --btn-bg: #000;
+  --btn-color: #fff;
+  --btn-outline-bg: #fff;
+  --btn-outline-color: #6c757d;
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --form-bg: #1e1e1e;
+  --text-color: #f5f5f5;
+  --illustration-bg: #2c2c2c;
+
+  /* Buttons */
+  --btn-bg: #f5f5f5;
+  --btn-color: #121212;
+  --btn-outline-bg: #2c2c2c;
+  --btn-outline-color: #f5f5f5;
+}
+
+/* ---------- Container & Form ---------- */
+#main-container {
+  background-color: var(--bg-color);
+  transition: background-color 0.4s ease;
+}
+
+.login-box {
+  max-width: 950px;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 20px;
+}
+
+.form-section {
+  background-color: var(--form-bg);
+  color: var(--text-color);
+  transition: all 0.4s ease;
+}
+
+.form-control {
+  background-color: var(--form-bg);
+  color: var(--text-color);
+  border: 1px solid #ccc;
+  transition: all 0.3s;
+}
+.form-control:focus {
+  border-color: #8e44ad;
+  box-shadow: none;
+}
+
+h3, p, label {
+  color: var(--text-color);
+  transition: color 0.4s;
+}
+
+/* ----- Illustration Area ----- */
+.illustration {
+  background-color: var(--illustration-bg);
+  min-height: 300px;
+  transition: background-color 0.4s;
+}
+
+.shapes {
+  position: relative;
+  height: 200px;
+}
+
+.shape {
+  width: 70px;
+  border-radius: 10px;
+  animation: float 3s ease-in-out infinite, glow 4s ease-in-out infinite;
+}
+
+/* Light Mode Colors */
+.shape.orange { height: 80px; background-color: #ff7b54; border-radius: 50% 50% 0 0; animation-delay: 0.2s; }
+.shape.black { height: 130px; background-color: #2f2f2f; animation-delay: 0.5s; }
+.shape.yellow { height: 100px; background-color: #f4d03f; border-radius: 20px; animation-delay: 0.8s; }
+.shape.purple { height: 160px; background-color: #8e44ad; animation-delay: 1.1s; }
+
+/* Glow effect */
+@keyframes glow {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.25); }
+}
+
+/* Floating */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Dark Mode color adjustment */
+body.dark-mode .shape.orange { background-color: #ff986d; box-shadow: 0 0 20px rgba(255, 122, 84, 0.4); }
+body.dark-mode .shape.black { background-color: #3d3d3d; box-shadow: 0 0 20px rgba(255, 255, 255, 0.08); }
+body.dark-mode .shape.yellow { background-color: #ffde59; box-shadow: 0 0 20px rgba(255, 222, 89, 0.4); }
+body.dark-mode .shape.purple { background-color: #b977db; box-shadow: 0 0 20px rgba(185, 119, 219, 0.4); }
+
+/* Password eye */
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 40px;
+  cursor: pointer;
+  color: #6c757d;
+  transition: color 0.2s;
+}
+.toggle-password:hover {
+  color: var(--text-color);
+}
+
+/* ----- Theme Switch ----- */
+.theme-toggle {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.switch {
+  width: 45px;
+  height: 24px;
+  background-color: #ccc;
+  display: inline-block;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.switch::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: all 0.3s;
+}
+#darkSwitch:checked + .switch {
+  background-color: #8e44ad;
+}
+#darkSwitch:checked + .switch::after {
+  transform: translateX(21px);
+}
+
+/* ---------- Buttons ---------- */
+.btn.btn-dark {
+  background-color: var(--btn-bg);
+  color: var(--btn-color);
+  border: none;
+  transition: all 0.4s ease;
+}
+.btn.btn-dark:hover {
+  opacity: 0.9;
+}
+
+.btn.btn-outline-secondary {
+  background-color: var(--btn-outline-bg);
+  color: var(--btn-outline-color);
+  border: 1px solid var(--btn-outline-color);
+  transition: all 0.4s ease;
+}
+.btn.btn-outline-secondary:hover {
+  opacity: 0.9;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .illustration {
+    display: none;
+  }
+  .form-section {
+    padding: 2.5rem 2rem;
+  }
+}
+
+#darkSwitch {
+  appearance: none; /* برای مرورگرهای جدید */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 45px;
+  height: 24px;
+  position: absolute;
+  opacity: 0; /* مخفی کردن input واقعی */
+}
