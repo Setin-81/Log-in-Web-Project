@@ -28,10 +28,19 @@ A modern, responsive **login page** with dark and light theme support, animated 
 
 ## Technologies 🛠️
 
-- **HTML5 & CSS3**  
-- **JavaScript (Vanilla)**  
-- **Bootstrap 5**  
-- **Google Fonts (Inter)**  
+- **HTML5 & CSS3**
+  ![HTML5](https://img.shields.io/badge/HTML5-orange?style=for-the-badge&logo=html5&logoColor=white)
+  ![CSS3](https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3&logoColor=white)
+ 
+- **JavaScript (Vanilla)**
+  ![JavaScript](https://img.shields.io/badge/JavaScript-yellow?style=for-the-badge&logo=javascript&logoColor=black)
+  
+- **Bootstrap 5**
+  ![Bootstrap](https://img.shields.io/badge/Bootstrap-purple?style=for-the-badge&logo=bootstrap&logoColor=white)
+  
+- **Google Fonts (Inter)**
+  ![Google Fonts](https://img.shields.io/badge/Google%20Fonts-red?style=for-the-badge&logo=google&logoColor=white)
+    
 - **Bootstrap Icons**  
-
+  ![Bootstrap Icons](https://img.shields.io/badge/Bootstrap%20Icons-purple?style=for-the-badge&logo=bootstrap&logoColor=white)
 ---
