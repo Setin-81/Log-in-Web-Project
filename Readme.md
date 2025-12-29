@@ -16,7 +16,7 @@ A modern, responsive **login page** with dark and light theme support, animated 
 
 ---
 
-## Screenshots 🖼️
+## Pictures of Project 🖼️
 
 **Light Mode:**  
 ![Light Mode Screenshot](light.png)  
