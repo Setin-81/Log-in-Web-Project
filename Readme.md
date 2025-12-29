@@ -18,10 +18,14 @@ A modern, responsive **login page** with dark and light theme support, animated 
 
 ## Pictures of Project 🖼️
 
-**Light Mode:**  
+**Light Mode:** 
+
+
 ![Light Mode Screenshot](light.png)  
 
 **Dark Mode:**  
+
+
 ![Dark Mode Screenshot](dark.png)  
 
 ---
